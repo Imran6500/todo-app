@@ -58,9 +58,12 @@ class _SqFliteDemoState extends State<SqFliteDemo> {
           },
         ),
         body: const Center(
-          child: Text(
-            "Click Below Button to Add TODO",
-            style: TextStyle(fontSize: 25),
+          child: Padding(
+            padding: EdgeInsets.all(8.0),
+            child: Text(
+              "Click Below Button to Add TODO",
+              style: TextStyle(fontSize: 22),
+            ),
           ),
         ));
   }
