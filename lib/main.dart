@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:todoapplication/services/pages/list_of_task.dart';
 import 'bloc/crud_bloc.dart';
 import 'services/pages/add_todo.dart';
 import 'splash_screen/splash_screen.dart';
@@ -57,13 +58,27 @@ class _SqFliteDemoState extends State<SqFliteDemo> {
                 MaterialPageRoute(builder: (c) => const AddTodoPage()));
           },
         ),
-        body: const Center(
-          child: Padding(
-            padding: EdgeInsets.all(8.0),
-            child: Text(
-              "Click Below Button to Add TODO",
-              style: TextStyle(fontSize: 22),
-            ),
+        body: Padding(
+          padding: const EdgeInsets.all(30.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Text(
+                "Click Below Button to Add TODO",
+                style: TextStyle(fontSize: 20),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              TextButton(
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const ListOfTask()));
+                  },
+                  child: const Text("click here to see listed TODO"))
+            ],
           ),
         ));
   }

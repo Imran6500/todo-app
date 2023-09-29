@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:intl/intl.dart';
-
 import '../../bloc/crud_bloc.dart';
 import '../../constants/constants.dart';
 import '../../models/todo.dart';
@@ -114,8 +113,10 @@ class _DetailsPageState extends State<DetailsPage> {
                                         ),
                                         Row(
                                           children: [
-                                            const Text(
-                                                'Important / Not Important'),
+                                            const Expanded(
+                                              child: Text(
+                                                  'Important / Not Important'),
+                                            ),
                                             Switch(
                                               value: toggleSwitch,
                                               onChanged: (newVal) {
